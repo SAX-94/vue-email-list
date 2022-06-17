@@ -1,0 +1,38 @@
+body {
+    background-color: #F6AE2D;
+}
+
+h1 {
+    padding-bottom: 2rem;
+}
+
+h1, h3, h5 {
+    font-weight: bolder;
+}
+
+ul {
+    padding-bottom: 1.5rem;
+}
+
+.wrapper {
+    height: 100vh;
+}
+
+.custom-box {
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 0 10px red;
+    min-height: 70%;
+    text-align: center;
+}
+
+.custom-box .loading-gif {
+    display: flex;
+    height: 270px;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-box .loading-gif img {
+    height: 55%;
+}

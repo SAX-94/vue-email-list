@@ -16,6 +16,28 @@
 
 <body>
 
+    <div class="wrapper d-flex justify-content-center align-items-center" id="app">
+        <div class="custom-box container p-5 d-flex justify-content-center align-items-center flex-column">
+            <div v-if="isError">
+                <h1>{{errorMsg}}</h1>
+            </div>
+            <div v-else>
+                <h1 class="text-danger">Generatore di email random!</h1>
+                <div v-if="!generated" class="loading-gif">
+                    <img src="img/loadingGif.gif" alt="Loading">
+                </div>
+                <div v-else>
+                    <ul>
+                        <li v-for="email in emailList">{{email}}</li>
+                    </ul>
+                </div>
+                <button type="button" class="btn btn-danger btn-lg" :class="{'disabled':!generated}"
+                    @click="generateEmailList()">Genera email</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
