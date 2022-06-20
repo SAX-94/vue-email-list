@@ -15,11 +15,11 @@ const app = new Vue({
             for (let i = 0; i < this.totalEmails; i++) {
                 axios
                     .get("https://flynn.boolean.careers/exercises/api/random/mail")
-                    .then(resp => {
+                    .then((resp) => {
                         this.emailList.push(resp.data.response);
                         if (this.emailList.length === this.totalEmails) this.generated = true;
                     })
-                    .catch(error => {
+                    .catch((error) => {
                         this.errorMsg = error;
                         this.isError = true;
                     })
