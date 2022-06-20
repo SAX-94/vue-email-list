@@ -13,7 +13,8 @@ const app = new Vue({
             this.generated = false;
             this.emailList = [];
             for (let i = 0; i < this.totalEmails; i++) {
-                axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
+                axios
+                    .get("https://flynn.boolean.careers/exercises/api/random/mail")
                     .then(resp => {
                         this.emailList.push(resp.data.response);
                         if (this.emailList.length === this.totalEmails) this.generated = true;
